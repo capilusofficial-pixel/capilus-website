@@ -67,7 +67,7 @@ function updateDownloadLimit() {
     const data = getDownloadData();
     
     document.getElementById('remaining-downloads').textContent = remaining;
-    
+document.getElementById('total-limit').textContent = CONFIG.dailyDownloadLimit;
     // リセット日を表示
     if (data.resetDate) {
         const resetInfo = document.createElement('p');
