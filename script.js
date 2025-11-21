@@ -3,8 +3,8 @@
 // ============================================
 const CONFIG = {
     totalFreeImages: 40,          // 無料画像の総数
-    dailyDownloadLimit: 2,         // 1日のダウンロード制限枚数
-    resetIntervalDays: 1,          // リセット間隔（日数） ※1=毎日、7=週1回
+    dailyDownloadLimit: 1,         // 1日のダウンロード制限枚数
+    resetIntervalDays: 7,          // リセット間隔（日数） ※1=毎日、7=週1回
     heroSliderInterval: 5000,      // ヒーロースライダー切り替え時間（ミリ秒）
 };
 
