@@ -50,7 +50,7 @@ body { font-family: 'Noto Sans JP', sans-serif; color: var(--text-dark); backgro
 .feature-card h3 { font-size: 1.5rem; margin-bottom: 15px; font-weight: 500; }
 .feature-card p { color: var(--text-gray); line-height: 1.8; }
 
-.free-gallery { padding: 120px 0; background: #fff; }
+.free-gallery { padding: 120px 0; background: #FAF8F3; }
 .section-header { text-align: center; margin-bottom: 80px; }
 .section-label { display: inline-block; color: var(--gold); font-size: 0.9rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 15px; }
 .section-header h2 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 4vw, 3.5rem); color: var(--primary); margin-bottom: 15px; }
