@@ -113,7 +113,7 @@ function generateFreeImages() {
        freeSlider.appendChild(item);
         
         // アイテムのスタイルを設定
-        item.style.maxWidth = '400px';
+        item.style.maxWidth = '600px';
         item.style.margin = '0 auto';
     }
     // ギャラリーグリッドを中央寄せ
