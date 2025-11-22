@@ -252,3 +252,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
 console.log('%c🎨 Capilus v2.0', 'color: #8B7355; font-size: 20px; font-weight: bold;');
 console.log(`無料画像: ${CONFIG.totalFreeImages}枚 | 制限: ${CONFIG.dailyDownloadLimit}枚/${CONFIG.resetIntervalDays}日ごと`);
+const heroImages = [
+    'images/hero-short-front.jpg',
+    'images/hero-short-side.jpg',
+    'images/hero-short-back.jpg',
+    'images/hero-medium-front.jpg',
+    'images/hero-medium-side.jpg',
+    'images/hero-medium-back.jpg',
+    'images/hero-long-front.jpg',
+    'images/hero-long-side.jpg',
+    'images/hero-long-back.jpg'
+];
+
+// ランダムに3枚選択
+function getRandomImages(arr, count) {
+    const shuffled = [...arr].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
+}
+
+// ヒーロースライダーに画像を適用
+function applyHeroImages() {
+    const selectedImages = getRandomImages(heroImages, 3);
+    const slides = document.querySelectorAll('.hero-slide');
+    
+    slides.forEach((slide, index) => {
+        if (selectedImages[index]) {
+            slide.style.backgroundImage = `url('${selectedImages[index]}')`;
+            slide.style.backgroundSize = 'cover';
+            slide.style.backgroundPosition = 'center';
+        }
+    });
+}
+
+// ページ読み込み時に実行
+document.addEventListener('DOMContentLoaded', applyHeroImages);
