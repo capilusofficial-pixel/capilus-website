@@ -168,20 +168,24 @@ body { font-family: 'Noto Sans JP', sans-serif; color: var(--text-dark); backgro
     .teaser-section { padding: 60px 0; }
     .teaser-title { font-size: 1.5rem; }
 }
-/* 無料ギャラリー - 1枚表示用 */
-.gallery-grid { 
-    display: flex !important; 
-    justify-content: center !important; 
-    margin-bottom: 40px !important; 
-}
 
-.gallery-item {
-    max-width: 400px !important;
+/* 無料ギャラリー - 1枚表示用 */
+.free-gallery .gallery-grid {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 auto 40px !important;
     width: 100% !important;
 }
 
+.free-gallery .gallery-item {
+    max-width: 400px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+}
+
 @media (max-width: 768px) {
-    .gallery-item { 
-        max-width: 320px !important; 
+    .free-gallery .gallery-item {
+        max-width: 320px !important;
     }
 }
