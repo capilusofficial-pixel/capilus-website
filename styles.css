@@ -127,3 +127,44 @@ body { font-family: 'Noto Sans JP', sans-serif; color: var(--text-dark); backgro
 @media (max-width: 480px) {
     .free-slider { grid-template-columns: 1fr; }
 }
+/* Coming Soon ティザー */
+.teaser-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #2C2C2C 0%, #3D3229 100%);
+    text-align: center;
+}
+
+.teaser-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.teaser-label {
+    display: inline-block;
+    color: #D4AF37;
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.teaser-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 15px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.teaser-subtitle {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    .teaser-section { padding: 60px 0; }
+    .teaser-title { font-size: 1.5rem; }
+}
