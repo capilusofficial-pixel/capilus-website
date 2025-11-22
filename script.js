@@ -118,10 +118,19 @@ function generateFreeImages() {
         item.style.margin = '0 auto';
 
         item.addEventListener('click', () => toggleImageSelection(i, item));
+    }
+    
     // ギャラリーグリッドを中央寄せ
     freeSlider.style.display = 'flex';
     freeSlider.style.justifyContent = 'center';
     freeSlider.style.width = '100%';
+    
+    // プレースホルダーのサイズ設定
+    const placeholders = freeSlider.querySelectorAll('.free-image-placeholder');
+    placeholders.forEach(p => {
+        p.style.width = '400px';
+        p.style.height = '533px';
+    });
 }
 
 function toggleImageSelection(imageId, element) {
