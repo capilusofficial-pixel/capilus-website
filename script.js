@@ -110,8 +110,16 @@ function generateFreeImages() {
         
         item.addEventListener('click', () => toggleImageSelection(i, item));
         
-        freeSlider.appendChild(item);
+       freeSlider.appendChild(item);
+        
+        // アイテムのスタイルを設定
+        item.style.maxWidth = '400px';
+        item.style.margin = '0 auto';
     }
+    // ギャラリーグリッドを中央寄せ
+    freeSlider.style.display = 'flex';
+    freeSlider.style.justifyContent = 'center';
+    freeSlider.style.width = '100%';
 }
 
 function toggleImageSelection(imageId, element) {
