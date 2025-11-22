@@ -113,9 +113,11 @@ function generateFreeImages() {
        freeSlider.appendChild(item);
         
         // アイテムのスタイルを設定
-        item.style.maxWidth = '600px';
+        item.style.maxWidth = '400px';
+        item.style.width = '400px';
         item.style.margin = '0 auto';
-    }
+
+        item.addEventListener('click', () => toggleImageSelection(i, item));
     // ギャラリーグリッドを中央寄せ
     freeSlider.style.display = 'flex';
     freeSlider.style.justifyContent = 'center';
