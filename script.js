@@ -307,7 +307,7 @@ function getRandomImages(arr, count) {
 
 // ヒーロースライダーに画像を適用
 function applyHeroImages() {
-    const selectedImages = getRandomImages(heroImages, 3);
+    const selectedImages = getRandomImages(heroImages, 9);
     const slides = document.querySelectorAll('.hero-slide');
     
     slides.forEach((slide, index) => {
