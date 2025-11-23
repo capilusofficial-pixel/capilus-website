@@ -132,11 +132,33 @@
         </div>
     </section>
 
-    <section class="ad-space">
-        <div class="container">
-            <div class="ad-placeholder">広告スペース 728×90</div>
+    <section class="ad-space" id="ad-section">
+    <div class="container">
+        <!-- AdSense承認待ち表示 -->
+        <div class="ad-pending" id="ad-pending">
+            <div class="ad-pending-content">
+                <span class="ad-label">ADVERTISEMENT</span>
+                <p class="ad-message">広告掲載準備中</p>
+            </div>
         </div>
-    </section>
+        
+        <!-- Google AdSense用（承認後に表示） -->
+        <div class="google-adsense" id="google-adsense" style="display: none;">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+                 crossorigin="anonymous"></script>
+            <!-- Capilus広告 -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+</section>
 
     <section class="products" id="products">
         <div class="container">
