@@ -305,3 +305,8 @@ function applyHeroImages() {
 
 // ページ読み込み時に実行
 document.addEventListener('DOMContentLoaded', applyHeroImages);
+// AdSense広告の切り替え
+function activateAdSense() {
+    document.getElementById('ad-pending').style.display = 'none';
+    document.getElementById('google-adsense').style.display = 'block';
+}
