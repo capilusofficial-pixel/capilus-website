@@ -95,43 +95,59 @@ document.getElementById('total-limit').textContent = CONFIG.dailyDownloadLimit;
 const freeSlider = document.getElementById('free-slider');
 const selectedImages = new Set();
 
+// 無料画像スライダー
 function generateFreeImages() {
     freeSlider.innerHTML = '';
     
-    for (let i = 1; i <= CONFIG.totalFreeImages; i++) {
-        const item = document.createElement('div');
-        item.className = 'free-image-item';
-        item.dataset.imageId = i;
-        
-        item.innerHTML = `
-            <div class="free-image-placeholder">画像 ${i}</div>
-            <div class="image-checkbox"></div>
-        `;
-        
-        item.addEventListener('click', () => toggleImageSelection(i, item));
-        
-       freeSlider.appendChild(item);
-        
-        // アイテムのスタイルを設定
-        item.style.maxWidth = '400px';
-        item.style.width = '400px';
-        item.style.margin = '0 auto';
+    // ランダムに1枚選択
+    const randomImageId = Math.floor(Math.random() * CONFIG.totalFreeImages) + 1;
+    
+    const item = document.createElement('div');
+    item.className = 'free-image-item';
+    item.dataset.imageId = randomImageId;
+    
+    // 実際の画像を表示
+    item.innerHTML = `
+        <img src="images/free-${randomImageId}.jpg" 
+             alt="無料ヘアスタイル画像" 
+             class="free-image"
+             onerror="this.parentElement.innerHTML='<div class=\\'free-image-placeholder\\'>画像 ${randomImageId}</div><div class=\\'image-checkbox\\'></div>'">
+        <div class="image-checkbox"></div>
+    `;
+    
+    freeSlider.appendChild(item);
+    
+    // アイテムのスタイルを設定
+    item.style.maxWidth = '400px';
+    item.style.width = '400px';
+    item.style.margin = '0 auto';
 
-        item.addEventListener('click', () => toggleImageSelection(i, item));
-    }
+    item.addEventListener('click', () => toggleImageSelection(randomImageId, item));
     
     // ギャラリーグリッドを中央寄せ
     freeSlider.style.display = 'flex';
     freeSlider.style.justifyContent = 'center';
     freeSlider.style.width = '100%';
     
-    // プレースホルダーのサイズ設定
+    // 画像のスタイル設定
+    const images = freeSlider.querySelectorAll('.free-image');
+    images.forEach(img => {
+        img.style.width = '100%';
+        img.style.height = 'auto';
+        img.style.aspectRatio = '3/4';
+        img.style.objectFit = 'cover';
+        img.style.borderRadius = '8px';
+    });
+    
+    // プレースホルダーのスタイル設定（画像読み込み失敗時用）
     const placeholders = freeSlider.querySelectorAll('.free-image-placeholder');
     placeholders.forEach(p => {
         p.style.width = '400px';
         p.style.height = '533px';
     });
 }
+    
+   
 
 function toggleImageSelection(imageId, element) {
     const remaining = getRemainingDownloads();
