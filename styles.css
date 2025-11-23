@@ -226,9 +226,56 @@ body { font-family: 'Noto Sans JP', sans-serif; color: var(--text-dark); backgro
     margin: 0 auto;
     min-height: 250px;
 }
+/* 無料ダウンロード画像 */
+.free-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.free-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.free-image-item {
+    position: relative;
+}
+
+.free-image-item .image-checkbox {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.free-image-item.selected .image-checkbox {
+    background: var(--gold);
+    border-color: var(--gold);
+}
+
+.free-image-item.selected .image-checkbox::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
 @media (max-width: 768px) {
     .ad-pending {
         padding: 30px 20px;
     }
-}し
+}
