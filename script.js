@@ -2,7 +2,7 @@
 // 設定（ここで自由に変更可能）
 // ============================================
 const CONFIG = {
-    totalFreeImages: 1,  // imagesフォルダ内の画像総数         // 無料画像の総数
+    totalFreeImages: 2,  // imagesフォルダ内の画像総数         // 無料画像の総数
     dailyDownloadLimit: 1,         // 1日のダウンロード制限枚数
     resetIntervalDays: 7,          // リセット間隔（日数） ※1=毎日、7=週1回
     heroSliderInterval: 5000,      // ヒーロースライダー切り替え時間（ミリ秒）
