@@ -279,24 +279,3 @@ body { font-family: 'Noto Sans JP', sans-serif; color: var(--text-dark); backgro
         padding: 30px 20px;
     }
 }
-/* Hero画像の背景設定 */
-.hero-slide:nth-child(1) {
-    background: linear-gradient(135deg, rgba(44,44,44,0.7) 0%, rgba(139,115,85,0.7) 100%), 
-                url('./images/hero1.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.hero-slide:nth-child(2) {
-    background: linear-gradient(135deg, rgba(107,86,68,0.7) 0%, rgba(160,139,114,0.7) 100%), 
-                url('./images/hero2.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.hero-slide:nth-child(3) {
-    background: linear-gradient(135deg, rgba(139,115,85,0.7) 0%, rgba(212,175,55,0.7) 100%), 
-                url('./images/hero3.jpg');
-    background-size: cover;
-    background-position: center;
-}
