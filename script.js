@@ -288,45 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
 console.log('%c🎨 Capilus v2.0', 'color: #8B7355; font-size: 20px; font-weight: bold;');
 console.log(`無料画像: ${CONFIG.totalFreeImages}枚 | 制限: ${CONFIG.dailyDownloadLimit}枚/${CONFIG.resetIntervalDays}日ごと`);
 
-// Hero画像の設定
-const heroImages = [
-    'images/hero-1.jpg',
-    'images/hero-2.jpg',
-    'images/hero-3.jpg',
-    'images/hero-4.jpg',
-    'images/hero-5.jpg',
-    'images/hero-6.jpg',
-    'images/hero-7.jpg',
-    'images/hero-8.jpg'
-];
 
-// ヒーロースライダーに画像を適用
-function applyHeroImages() {
-    const slides = document.querySelectorAll('.hero-slide');
-   
-    slides.forEach((slide, index) => {
-        if (heroImages[index]) {
-            // CSSのグラデーションと画像を組み合わせ
-            const gradients = [
-                'linear-gradient(135deg, rgba(44,44,44,0.7) 0%, rgba(139,115,85,0.7) 100%)',
-                'linear-gradient(135deg, rgba(107,86,68,0.7) 0%, rgba(160,139,114,0.7) 100%)',
-                'linear-gradient(135deg, rgba(139,115,85,0.7) 0%, rgba(212,175,55,0.7) 100%)',
-                'linear-gradient(135deg, rgba(44,44,44,0.7) 0%, rgba(139,115,85,0.7) 100%)',
-                'linear-gradient(135deg, rgba(107,86,68,0.7) 0%, rgba(160,139,114,0.7) 100%)',
-                'linear-gradient(135deg, rgba(139,115,85,0.7) 0%, rgba(212,175,55,0.7) 100%)',
-                'linear-gradient(135deg, rgba(44,44,44,0.7) 0%, rgba(139,115,85,0.7) 100%)',
-                'linear-gradient(135deg, rgba(107,86,68,0.7) 0%, rgba(160,139,114,0.7) 100%)'
-            ];
-           
-            slide.style.background = `${gradients[index]}, url('${heroImages[index]}')`;
-            slide.style.backgroundSize = 'cover';
-            slide.style.backgroundPosition = 'center';
-        }
-    });
-}
-
-// ページ読み込み時に実行
-document.addEventListener('DOMContentLoaded', applyHeroImages); 
 // AdSense広告の切り替え
 function activateAdSense() {
     document.getElementById('ad-pending').style.display = 'none';
